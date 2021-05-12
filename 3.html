@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curriculum Vitae</title>
+	<link rel="stylesheet" type="text/css" href="1.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&family=Fredoka+One&family=Lobster&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: 'Tahoma', sans-serif;
+}
+#main{
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+}
+nav{
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	line-height: 80px;
+}
+nav ul{
+	float: right;
+	margin-right: 30px;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	transition: 0.8s all;
+}
+nav ul li:hover{
+	background-color: #A52A2A;
+}
+nav ul li a{
+	font-family: 'Fredoka One', cursive;
+	text-decoration: none;
+	color: #fff;
+	padding: 30px;
+}
+.resume{
+	width: 800px;
+	background: black;
+	margin: 25px auto;
+	display: flex;
+}
+.left{
+	background: #292b2f;
+	width: 250px;
+	padding: 0 20px;
+}
+.right{
+	width: calc(100% - 250px);
+}
+.left .img_holder{
+	text-align: center;
+	padding: 20px 0;
+}
+.left .img_holder img{
+	width: 200px;
+	border-radius: 30px;
+}
+.pb{
+	padding-bottom: 20px;
+}
+.title{
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding-bottom: 10px;
+	color: #3525af;
+	position: relative;
+	text-align: right;
+	margin-bottom: 15px;
+}
+.title:before{
+	content: "";
+	position: absolute;
+	top: 35px;
+	right: 0;
+	width: 50px;
+	height: 3px;
+	background: #3525af;
+}
+.left .icon{
+	font-size: 20px;
+	color: #9153c9;
+}
+.left .text{
+	color: #9153c9;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+.contact .li_wrap{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 15px;
+}
+.contact .li_wrap .icon{
+	width: 50px;
+	height: 50px;
+	background: #fff;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+}
+.contact .li_wrap .text{
+	width:  calc(100% - 50px);
+	word-break: break-word;
+	color: #fff;
+}
+.skills ul, .hobbies ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.skills .li_wrap, .hobbies .li_wrap{
+	width: 100px;
+	height: 100px;
+	margin-bottom: 15px;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.skills .li_wrap{
+	background: #fff;
+}
+.skills .li_wrap .text,
+.hobbies .li_wrap .text{
+	margin-top: 5px;
+}
+.hobbies .li_wrap{
+	border: 2px solid #fff;
+}
+.hobbies .li_wrap .icon,
+.hobbies .li_wrap .text{
+	color: #fff;
+}
+.hobbies .li_wrap:hover{
+	background: #fff;
+}
+.hobbies .li_wrap:hover .icon,
+.hobbies .li_wrap:hover .text{
+	color: #9153c9;
+}
+.header{
+	background: #292b2f;
+	padding: 15px 30px;
+	color: #fff;
+	height: 240px;
+}
+.header .name{
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #3525af;
+}
+.header .role{
+	font-weight: 300;
+	font-size: 18px;
+}
+.header .about{
+	margin-top: 20px;
+	line-height: 26px;
+}
+.right_inner{
+	padding: 30px;
+	color: #292b2f;
+}
+.right_inner .educ{
+	margin-top: 30px;
+}
+.right_inner .li_wrap{
+	display: flex;
+	margin-bottom: 15px;
+}
+.right_inner .li_wrap .date{
+	width: 125px;
+	color: #9153c9;
+}
+.right_inner .li_wrap .info{
+	width: calc(100% - 125px);
+	padding-left: 25px;
+	position: relative;
+}
+.right_inner .li_wrap .info_title{
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #9153c9;
+}
+.right_inner .li_wrap .info_com{
+	font-weight: 300;
+	font-size: 14px;
+	margin-top: 3px;
+}
+.right_inner .li_wrap .info_cont{
+	margin-top: 15px;
+}
+.right_inner .li_wrap .info:before{
+	content: "";
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	background: #9153c9;
+	border-radius: 50%;
+}
+.right_inner .li_wrap .info:after{
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 4px;
+	width: 2px;
+	height: 90%;
+	background: #9153c9;
+}
+
+
+
+
+
+	</style>
+</head>
+
+
+<body>
+	<div id="main">
+		<nav>
+			<img src="PICS/logobsit.gif" width="100" height="80">
+			<ul>
+				<li><a href="1.html">Home</a></li>
+				<li><a href="2.html">Gallery</a></li>
+				<li><a href="3.html">About</a></li>
+				<li><a href="4.html">Projects</a></li>
+				<li><a href="5.html">Education</a></li>
+			</ul>
+		</nav>
+
+		<div class="wrapper">
+			<div class="resume">
+				<div class="left">
+					<div class="img_holder">
+						<img src="PICS/me1.jpg" alt="me1" style="width:200px; height: 190px;">
+					</div>
+					<div class="contact_wrap pb">
+						<div class="title">Contact</div>
+						<div class="contact">
+							<ul>
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-mobile" aria-hidden="true"></i>
+										</div>
+										<div class="text">09771322507</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-envelope" aria-hidden="true"></i>
+										</div>
+										<div class="text">harveyjie@gmail.com</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-thumb-tack" aria-hidden="true"></i>
+										</div>
+										<div class="text">Tebag West Sta. Barbara Pangasinan</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-google-wallet" aria-hidden="true"></i>
+										</div>
+										<div class="text">www.facebook.com/HarveyJie</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="skills_wrap pb">
+						<div class="title">Skills</div>
+						<div class="skills">
+							<ul>
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-html5" aria-hidden="true"></i>
+										</div>
+										<div class="text">HTML</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-css3" aria-hidden="true"></i>
+										</div>
+										<div class="text">CSS</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-wordpress" aria-hidden="true"></i>
+										</div>
+										<div class="text">MS WORD</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-android" aria-hidden="true"></i>
+										</div>
+										<div class="text">ANDROID<br>STUDIO</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="hobbies_wrap pb">
+						<div class="title">Hobbies</div>
+						<div class="hobbies">
+							<ul>
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-gamepad" aria-hidden="true"></i>
+										</div>
+										<div class="text">Gaming</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-book" aria-hidden="true"></i>
+										</div>
+										<div class="text">Reading</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-code" aria-hidden="true"></i>
+										</div>
+										<div class="text">Coding</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="li_wrap">
+										<div class="icon">
+											<i class="fa fa-headphones" aria-hidden="true"></i>
+										</div>
+										<div class="text">Listening</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="header">
+						<div class="name_role">
+							<div class="name">
+								Harvey Jie C. Casamayor
+							</div>
+							<div class="role">
+								BSIT Student
+							</div>
+						</div>
+						<div class="about">
+							I am Harvey Jie Casamayor and I'm taking Bachelor of Science in Information and Technology. I also love playing mobile games, and playing basketball with my father and with my two brothers. I'm the oldest of my Father's son.
+						</div>
+					</div>
+					<div class="right_inner">
+						<div class="exp">
+							<div class="title">Experience</div>
+							<div class="exp_wrap">
+								<ul>
+									<li>
+										<div class="li_wrap">
+										<div class="date">November 3, 2019</div>
+											<div class="info">
+												<p class="info_title">PITCON</p>
+												<p class="info_com">Facebook</p>
+												<p class="info_cont">
+												Has completed training in recognition of Participation in the workshop on PITCON 2019 at Lingayen Pangasinan host by Sir Franz Pacifeli.
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li>
+										<div class="li_wrap">
+										<div class="date">January 12, 2019</div>
+											<div class="info">
+												<p class="info_title">NCII Passer</p>
+												<p class="info_com">DMNHS</p>
+												<p class="info_cont">
+												Successfully passed the NCII Examination
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li>
+										<div class="li_wrap">
+										<div class="date">April 2018</div>
+											<div class="info">
+												<p class="info_title">OJT Senior High</p>
+												<p class="info_com">DMNHS</p>
+												<p class="info_cont">
+												Has completed training in OJT in Senior High School.
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="educ">
+							<div class="title">Education</div>
+							<div class="educ_wrap">
+								<ul>
+									<li>
+										<div class="li_wrap">
+										<div class="date">2019 - Present</div>
+											<div class="info">
+												<p class="info_title">Tertiary</p>
+												<p class="info_com">Urdaneta City University<br>San Vicente West, Urdaneta Pangasinan</p>
+												<p class="info_cont">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY<br>2nd Year block 6</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="li_wrap">
+										<div class="date">2016-2019</div>
+											<div class="info">
+												<p class="info_title">Secondary</p>
+												<p class="info_com">Daniel Maramba National High School</p>
+												<p class="info_cont">
+												Technical Vocational Livelihood Education <br> Information and Communication Technology<br>With High Honor
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li>
+										<div class="li_wrap">
+										<div class="date">2012-2016</div>
+											<div class="info">
+												<p class="info_title">Primary</p>
+												<p class="info_com">Tebag Elementary School<br>Sta. Barbara Pangasinan</p>
+												<p class="info_cont">
+												Salutatorian
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
